@@ -13,7 +13,7 @@ interface StationDetailsProps {
 
 const StationDetails = ({ station, onClose, onBookNow }: StationDetailsProps) => {
   // Fetch slots for this station
-  const { data: slots, isLoading: slotsLoading } = useQuery({
+  const { data: slots = [], isLoading: slotsLoading } = useQuery<Slot[]>({
     queryKey: [`/api/stations/${station.id}/slots`],
     enabled: !!station
   });
@@ -163,23 +163,23 @@ const StationDetails = ({ station, onClose, onBookNow }: StationDetailsProps) =>
           <div className="space-y-2 text-sm">
             <div className="flex justify-between">
               <span>Standard Charging (Level 2)</span>
-              <span className="font-medium">${station.pricePerKwh.toFixed(2)}/kWh</span>
+              <span className="font-medium">₹{station.pricePerKwh.toFixed(2)}/kWh</span>
             </div>
             {station.fastChargingAvailable && (
               <>
                 <div className="flex justify-between">
                   <span>Fast Charging (DC)</span>
-                  <span className="font-medium">${(station.pricePerKwh * 1.2).toFixed(2)}/kWh</span>
+                  <span className="font-medium">₹{(station.pricePerKwh * 1.2).toFixed(2)}/kWh</span>
                 </div>
                 <div className="flex justify-between">
                   <span>Super Charging</span>
-                  <span className="font-medium">${(station.pricePerKwh * 1.4).toFixed(2)}/kWh</span>
+                  <span className="font-medium">₹{(station.pricePerKwh * 1.4).toFixed(2)}/kWh</span>
                 </div>
               </>
             )}
             <div className="flex justify-between">
               <span>Idle Fee (after charging)</span>
-              <span className="font-medium">$0.40/min</span>
+              <span className="font-medium">₹10.00/min</span>
             </div>
           </div>
         </div>

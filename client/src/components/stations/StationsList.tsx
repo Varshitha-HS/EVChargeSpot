@@ -122,7 +122,7 @@ const StationsList = ({
               </div>
               <div className="flex justify-between items-center mt-3">
                 <div className="text-sm">
-                  <span className="font-medium">${station.pricePerKwh.toFixed(2)}</span>
+                  <span className="font-medium">₹{station.pricePerKwh.toFixed(2)}</span>
                   <span className="text-[#757575]">/kWh</span>
                 </div>
                 <Button 
