@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800px" height="400px" viewBox="0 0 800 400" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>EV Charging Station Finder Preview</title>
+    <defs>
+        <linearGradient x1="0%" y1="0%" x2="100%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#00BFA5" offset="0%"></stop>
+            <stop stop-color="#1976D2" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Background" fill="#FFFFFF" x="0" y="0" width="800" height="400"></rect>
+        <rect id="App-Background" fill="#F5F5F5" x="50" y="50" width="700" height="300" rx="8"></rect>
+        <rect id="Map" fill="#E0E0E0" x="300" y="80" width="420" height="240" rx="4"></rect>
+        <rect id="Sidebar" fill="#FFFFFF" x="80" y="80" width="200" height="240" rx="4"></rect>
+        <rect id="Header" fill="url(#linearGradient-1)" x="80" y="80" width="200" height="40" rx="4"></rect>
+        <text id="EV-Finder" font-family="Arial-BoldMT, Arial" font-size="16" font-weight="bold" fill="#FFFFFF">
+            <tspan x="130" y="106">EV Finder</tspan>
+        </text>
+        <circle id="Station-1" fill="#00BFA5" cx="400" cy="150" r="8"></circle>
+        <circle id="Station-2" fill="#00BFA5" cx="500" cy="200" r="8"></circle>
+        <circle id="Station-3" fill="#00BFA5" cx="450" cy="250" r="8"></circle>
+        <circle id="Station-4" fill="#1976D2" cx="600" cy="180" r="8"></circle>
+        <rect id="StationList-Item1" fill="#FFFFFF" x="90" y="130" width="180" height="40" rx="4"></rect>
+        <rect id="StationList-Item2" fill="#FFFFFF" x="90" y="180" width="180" height="40" rx="4"></rect>
+        <rect id="StationList-Item3" fill="#FFFFFF" x="90" y="230" width="180" height="40" rx="4"></rect>
+        <rect id="Search-Bar" fill="#FFFFFF" x="320" y="90" width="380" height="30" rx="15"></rect>
+        <text id="App-Name" font-family="Arial-BoldMT, Arial" font-size="24" font-weight="bold" fill="#212121">
+            <tspan x="250" y="380">EV Charging Station Finder</tspan>
+        </text>
+    </g>
+</svg>
