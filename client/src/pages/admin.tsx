@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Lock, Building2, CalendarClock, Users, BarChart3, AlertTriangle } from "lucide-react";
 
 const Admin = () => {
-  const { user, isAuthenticated, isLoading } = useAuth();
+  const { user, isAuthenticated, isLoading, openAuthDialog } = useAuth();
   const { toast } = useToast();
   const [activeMenu, setActiveMenu] = useState("stations");
   
@@ -48,7 +48,10 @@ const Admin = () => {
           <Lock className="mx-auto h-12 w-12 text-[#00BFA5] mb-4" />
           <h2 className="text-xl font-medium mb-2">Authentication Required</h2>
           <p className="text-[#757575] mb-6">Please log in to access the admin dashboard.</p>
-          <Button className="bg-[#00BFA5] hover:bg-[#00BFA5]/90 w-full">
+          <Button 
+            className="bg-[#00BFA5] hover:bg-[#00BFA5]/90 w-full"
+            onClick={openAuthDialog}
+          >
             Log In
           </Button>
         </div>

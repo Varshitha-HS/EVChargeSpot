@@ -3,7 +3,7 @@ import { useAuth } from "@/context/AuthContext";
 
 const Navigation = ({ isMobile = false }: { isMobile?: boolean }) => {
   const [location] = useLocation();
-  const { user, isAuthenticated, logout } = useAuth();
+  const { user, isAuthenticated, logout, openAuthDialog } = useAuth();
   
   const isActive = (path: string) => location === path;
   
@@ -42,7 +42,10 @@ const Navigation = ({ isMobile = false }: { isMobile?: boolean }) => {
       )}
       
       {!isAuthenticated ? (
-        <button className="bg-[#00BFA5] text-white px-4 py-2 rounded-md font-medium hover:bg-opacity-90 transition duration-150">
+        <button 
+          onClick={openAuthDialog}
+          className="bg-[#00BFA5] text-white px-4 py-2 rounded-md font-medium hover:bg-opacity-90 transition duration-150"
+        >
           Login
         </button>
       ) : (
